@@ -1,6 +1,8 @@
 <template>
-  <div class="unit" v-for="unit in manifest" :key="unit.item">
-    <app-child :item="unit.item" :url="unit.url"></app-child>
+  <div id="card-container">
+    <div class="unit" v-for="unit in manifest" :key="unit.item">
+      <app-child :item="unit.item" :url="unit.url"></app-child>
+    </div>
   </div>
 </template>
 
@@ -37,8 +39,14 @@ export default {
 body,
 html {
   font-family: "PT Serif", serif;
+  margin: 0;
 }
 #app {
+  display: flex;
+  justify-content: center;
+}
+
+#card-container {
   display: flex;
   justify-content: center;
 }
